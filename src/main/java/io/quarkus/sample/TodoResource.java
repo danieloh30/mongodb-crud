@@ -46,7 +46,8 @@ public class TodoResource {
   @POST // Create
 //  @Transactional
   public Response create(Todo item) {        
-    item.anumber= random.nextDouble(BOUND);
+    // item.anumber= random.nextDouble(BOUND);
+    item.anumber= random.nextDouble();
     item.persist();
     return Response.status(Status.CREATED).entity(item).build();
   }
