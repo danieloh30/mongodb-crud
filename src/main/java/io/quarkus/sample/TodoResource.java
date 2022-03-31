@@ -44,7 +44,7 @@ public class TodoResource {
 
 
   @POST // Create
-  @Transactional
+//  @Transactional
   public Response create(Todo item) {        
     item.anumber= random.nextDouble(BOUND);
     item.persist();
@@ -69,7 +69,7 @@ public class TodoResource {
 
   @PATCH // Update
   @Path("/{id}")
-  @Transactional
+  // @Transactional
   public Response update(Todo todo, @PathParam("id") String id) {
         Todo entity = Todo.findById(new ObjectId(id));
         entity.id = new ObjectId(id);
@@ -84,7 +84,7 @@ public class TodoResource {
 
 
   @DELETE
-  @Transactional
+  // @Transactional
   @Path("/{id}")
   public Response deleteOne(@PathParam("id") String id) {
      Todo entity = Todo.findById(new ObjectId(id));
