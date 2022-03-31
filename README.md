@@ -19,3 +19,8 @@ https://www.mongodb.com/basics/mongodb-atlas-tutorial
 
 ![MongoDB Compass](images/mongodb-compass.png)
 
+6. Build for Sandbox
+mvn package -Dquarkus.package.type=uber-jar
+
+7. Drag & Drop
+
