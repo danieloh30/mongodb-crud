@@ -78,7 +78,8 @@ public class TodoResource {
         entity.order = todo.order;
         entity.title = todo.title;
         entity.url = todo.url;
-        entity.anumber = random.nextDouble(BOUND);
+        // entity.anumber = random.nextDouble(BOUND);
+        entity.anumber = random.nextDouble();
         entity.update(); // send to Mongo
         return Response.ok(entity).build();
   }
